@@ -45,6 +45,13 @@ p.categorie {
     /*box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);*/
 }
 
+span.age{
+      color: cyan;
+      font-weight: bold;
+      font-size: 30px;
+      text-shadow: 2px 2px 5px black;
+    }
+
 h1 {
     font-family: Lobster;
     text-shadow: 2px 2px 5px green;
@@ -240,6 +247,7 @@ video {
     p.categorie {
         font-size: 16px;
     }
+
     h1 {
         font-size: 16px;
         width: 95%;
@@ -247,13 +255,13 @@ video {
         padding: 15px 0px 0px 0px;
     }
     p.description {
-        font-size: 15px;
+        font-size: 20px;
     }
     p.presentation {
-        font-size: 18px;
+        font-size: 20px;
     }
     img.gif{
-    width: 65%;
+    width: 80%;
     height: 95%;
 }
 }
@@ -269,6 +277,12 @@ video {
     }
     p.categorie {
         font-size: 25px;
+    }
+    span.age{
+        color: cyan;
+        font-weight: bold;
+        font-size: 50px;
+        text-shadow: 4px 4px 5px black;
     }
     h1 {
         font-size: 30px;
