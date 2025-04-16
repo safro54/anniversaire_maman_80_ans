@@ -10,15 +10,12 @@ body {
 }
 
 div.contenu {
-    /*background-color: Skyblue;*/
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
     background-image: url("sky.jpg");
-    /*background-repeat: repeat-x;*/
-   /* min-width: 200px;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.3);*/
+    border-radius: 15px;
     overflow: visible;
 }
 
@@ -57,11 +54,11 @@ h1 {
     text-shadow: 2px 2px 5px green;
     /*font-stretch: expanded;*/
     width: 95%;
-    height: 50%;
+    height: 70%;
     padding-left: auto;
     padding-right: auto;
     background-color: lightyellow;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     vertical-align: center;
     border: 2px solid black;
@@ -184,44 +181,13 @@ img.une{
     display: block;
     margin: auto;
     width: 90%;
-    padding: 0px 0px 0px 0px ;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
 }
 
 img.deux{
     display: block;
     margin: auto;
-    width: 90%;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
-}
-
-img.trois{
-    display: block;
-    margin: auto;
-    width: 50%;
-    object-fit: cover;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
-}
-
-img.quatre{
-    display: block;
-    margin: auto;
-    width: 90%;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
-}
-
-img.cinq{
-    display: block;
-    margin: auto;
-    width: 90%;
-    padding: 0px 0px 0px 0px ;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
-}
-
-img.six{
-    display: block;
-    margin: auto;
-    width: 90%;
+    width: 43%;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -242,7 +208,6 @@ video {
         margin-left: auto;
         margin-right: auto;
         padding: 0px 20px 20px 20px;
-        /*min-width: 50%;*/
     }
     p.categorie {
         font-size: 16px;
@@ -261,9 +226,9 @@ video {
         font-size: 20px;
     }
     img.gif{
-    width: 80%;
-    height: 95%;
-}
+        width: 80%;
+        height: 95%;
+    }
 }
 
 /* Styles pour tablette */
@@ -302,7 +267,7 @@ video {
     img.gif{
     width: 80%;
     height: 95%;
-}
+    }
 }
 
 @media only screen and (min-width: 1440px) {
