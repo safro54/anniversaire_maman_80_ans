@@ -19,6 +19,10 @@ div.gallery img {
   margin-bottom: 0px;
 }
 
+img{
+    margin-bottom: 0px;
+}
+
 div.desc {
   padding: 5px;
   text-align: center;
@@ -32,6 +36,44 @@ div.desc {
 
 * {
   box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin-left: 0px;
+    padding: 0;
+    position: fixed;
+    top: 25px;
+    width: 100%;
+    overflow: hidden;
+    background-color: violet;
+    z-index: 1;
+    display: block;
+}
+
+li {
+  float: left;
+  border-radius: 0px;
+  border-right: 1px solid white;
+  padding: 0px 5px;
+  margin-top: 5px;
+  /*background-color: lightblue;*/
+}
+
+li a {
+  display: block;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 5px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color: gray;
+}
+
+li a(.active){
+    color: gray;
 }
 
 .responsive {
@@ -64,19 +106,13 @@ div.desc {
    }
 }
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 body {
-    background-color: Black;
+    background-color: violet;
     font-family: "arial";
 }
 
 div.contenu {
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
@@ -86,23 +122,35 @@ div.contenu {
 }
 
 div.categorie {
-    margin-bottom: 0px;
-    margin-top: 0px;
+    display: inline-block;
+    background-color: Violet;
     overflow: visible;
     text-align: center;
     width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
 }
 
-p.categorie {
-    background-color: Violet;
-    color: rgb(255, 255, 255);
-    display: inline-block;
-    margin-top: -4%;
-    padding: 8px 18px;
-    margin-bottom: 0px;
-    font-weight: bold;
-    font-size: 15px;
+#titre {
+    color: white;
     text-shadow: 2px 2px 5px blue;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+}
+
+p.intro {
+    background-color: Violet;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px blue;
+    padding: 5px;
     border: 2px solid lightblue;
     border-radius: 15px;
 }
@@ -110,20 +158,9 @@ p.categorie {
 span.age{
       color: cyan;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 20px;
       text-shadow: 2px 2px 5px black;
     }
-
-h1 {
-    font-family: Lobster;
-    text-shadow: 2px 2px 5px green;
-    width: 100%;
-    padding: 5px;
-    background-color: lightyellow;
-    font-size: 15px;
-    border: 2px solid black;
-    border-radius: 15px;
-}
 
 h2{
     font-family: Lobster;
@@ -215,7 +252,7 @@ p.presentation {
 table.titre{
    padding: 0px 0px;
    width: 100%;
-   height: auto;
+   height: 35%;
 }
 
 table.titre td {
@@ -262,15 +299,14 @@ table.info th {
 
 
 img.gif{
-    width: 60%;
-    height: 95%;
+    width: 100%;
+    height: 80%;
     border-radius: 15px;
 }
 
 video {
     border-radius: 15px;
     width: 100%;
-    height: auto;
 }
 
 /* Styles pour smartphone large */
@@ -299,6 +335,9 @@ video {
         width: 80%;
         height: 95%;
     }
+    video {
+    width: 49%;
+}
 }
 
 /* Styles pour tablette */
@@ -339,11 +378,11 @@ video {
     height: 95%;
     }
     video{
-        width: 50%;
+        width: 49%;
     }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
     div.contenu {
         margin-left: auto;
         margin-right: auto;
@@ -352,9 +391,11 @@ video {
     p.presentation {
         font-size: 40px;
     }
-    h1 {
-        font-size: 30px;
-        padding: 15px;
+    p.intro {
+        font-size: 35px;
+    }
+    #titre {
+        font-size: 25px;
     }
     h2{
         font-size: 45px;
