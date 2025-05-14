@@ -39,13 +39,13 @@ div.desc {
 }
 ul {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: -7px;
     padding: 0;
     position: fixed;
     top: 25px;
     width: 100%;
     overflow: hidden;
-    background-color: violet;
+    background-color: MistyRose;
     z-index: 1;
     display: block;
 }
@@ -53,7 +53,7 @@ ul {
 li {
   float: left;
   border-radius: 0px;
-  border-right: 1px solid white;
+  border-right: 1px solid gray;
   padding: 0px 5px;
   margin-top: 5px;
   /*background-color: lightblue;*/
@@ -62,7 +62,8 @@ li {
 li a {
   display: block;
   font-size: 16px;
-  color: white;
+  color: hotpink;
+  /*text-shadow: 2px 2px 5px lightblue;*/
   text-align: center;
   padding: 10px 5px;
   text-decoration: none;
@@ -107,29 +108,34 @@ li a(.active){
 }
 
 body {
-    background-color: violet;
+    background-color: Pink;
     font-family: "arial";
 }
 
 div.contenu {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    background-image: url("sky.jpg");
+    background: url("sky.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     border-radius: 15px;
     overflow: visible;
 }
 
 div.categorie {
     display: inline-block;
-    background-color: Violet;
+    background-color: LightPink;
     overflow: visible;
     text-align: center;
     width: 100%;
     z-index: 1;
     position: fixed;
     top: 0;
+    margin-left: -8px;
 }
 
 #titre {
@@ -140,11 +146,11 @@ div.categorie {
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 0px;
-    margin-left: -10px;
+    margin-left: -0px;
 }
 
 p.intro {
-    background-color: Violet;
+    background-color: LightPink;
     color: white;
     width: 100%;
     font-weight: bold;
@@ -171,7 +177,7 @@ h2{
     padding: 5px;
     margin-left: auto;
     margin-right: auto;
-    background-color: Violet;
+    background-color: Pink;
     border: 2px solid lightblue;
     border-radius: 15px;
 }
@@ -243,9 +249,12 @@ p.presentation {
     text-align: center;
     font-family: Brush Script MT, Brush Script Std, cursive;
     padding: 0px 10px;
-    display: inline-block;
-    font-size: 18px;
+    display: block;
+    font-size: 25px;
     border-radius: 15px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: lightgreen;
 }
 
