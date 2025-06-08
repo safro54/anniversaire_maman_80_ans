@@ -11,120 +11,111 @@
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#photos">photos</a></li>
         <li><a href="#videos">videos</a></li>
+        <li><a href="#photos_anniv">photos anniversaire</a></li>
     </ul>
     <div class="categorie">
         <p id="titre">"Marie-louise Muller"</p>
     </div>
-<body>
-    <div class="contenu">
-        <div id="accueil" style="padding-top:95px;">
-            <table class="titre">
-                <tr>
-                    <th><img class = "gif" src="date-of-birth-2.gif" /></th>
-                    <th><p class="intro">15 mai 2025<BR>Anniversaire des<BR><span class="age">🎁<i>"80 ans"</i>🎂</span></p></th>
-                    <th><img class = "gif" src="date-of-birth.gif" /></th>
-                </tr>
-            </table>
-            <!-- Mon commentaire HTML -->
-            <div class="centre">
-                <img class="proprios" src="maman2.jpg">
-                <p class="presentation">" Joyeux anniversaire !! "</p>
+    <body>
+        <div class="contenu">
+            <div id="accueil" style="padding-top:95px;">
+                <table class="titre">
+                    <tr>
+                        <th><img class = "gif" src="date-of-birth-2.gif" /></th>
+                        <th><p class="intro">15 mai 2025<BR>Anniversaire des<BR>
+                            <span class="age">🎁<i>"80 ans"</i>🎂</span></p></th>
+                        <th><img class = "gif" src="date-of-birth.gif" /></th>
+                    </tr>
+                </table>
+                <!-- Mon commentaire HTML -->
+                <div class="centre">
+                    <img class="proprios" src="maman2.jpg">
+                    <p class="presentation">" Joyeux anniversaire !! "</p>
+                </div>
+                <div class="separateur2"></div>
+            </div>
+            <div id="photos" style="padding-top:80px;">
+                <h2>Gallerie photos:</h2>
+                <script>
+                    const liste_photos = {
+                        "parents maman.jpg": "ses parents",
+                        "maman_enfant.jpg": "maman enfant",
+                        "papa&maman.jpg": "son amour",
+                        "mariage.jpg": "son mariage",
+                        "vacances.jpg": "vacances en famille",
+                        "fraterie.jpg": "Ses enfants",
+                        "petits enfants.jpg": "Ses petits enfants",
+                        "baptême.jpg": " Baptême Elena ",
+                        "fraterie_anniv.jpg": " anniversaire "
+                        };
+                    const galleryContainer = document.getElementById('photos');
+                    for (const [src, desc] of Object.entries(liste_photos)) {
+                        const galleryDiv = document.createElement('div');
+                        galleryDiv.className = 'responsive';
+                        const gallery = document.createElement('div');
+                        gallery.className = 'gallery';
+                        const link = document.createElement('a');
+                        link.target = '_blank';
+                        link.href = src;
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.id = src;
+                        const descDiv = document.createElement('div');
+                        descDiv.className = 'desc';
+                        descDiv.textContent = desc;
+                        link.appendChild(img);
+                        gallery.appendChild(link);
+                        gallery.appendChild(descDiv);
+                        galleryDiv.appendChild(gallery);
+                        galleryContainer.appendChild(galleryDiv);
+                        }
+                </script>
             </div>
             <div class="separateur2"></div>
+            <div id="videos" style="padding-top:80px;">
+                <h2>Gallerie videos:</h2>
+                <script>
+                    const liste_videos = ["video.mp4", "bougie.mp4"];
+                    const VideoContainer = document.getElementById('videos');
+                    for (const src of liste_videos) {
+                        const video = document.createElement('video');
+                        video.controls = true;
+                        video.style.margin = '2px';
+                        const source = document.createElement('source');
+                        source.src = src;
+                        video.appendChild(source);
+                        VideoContainer.appendChild(video);
+                        }
+                </script>
+            </div>
+            <div class="separateur2"></div>
+            <div id="photos_anniv" style="padding-top:80px;">
+                <h2>Gallerie photos anniversaire:</h2>
+                <script>
+                    const listePhotosAnniv = ["IMG_8179.webp"];
+                    for (let i = 8183; i <= 8271; i++) {
+                        listePhotosAnniv.push(`IMG_${i}.webp`);
+                    }
+                    const galleryAnnivContainer = document.getElementById('photos_anniv');
+                    for (const src of listePhotosAnniv) {
+                        const galleryAnnivDiv = document.createElement('div');
+                        galleryAnnivDiv.className = 'responsive';
+                        const gallery = document.createElement('div');
+                        gallery.className = 'gallery';
+                        const link = document.createElement('a');
+                        link.target = '_blank';
+                        link.href = src;
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.id = src;
+                        link.appendChild(img);
+                        gallery.appendChild(link);
+                        galleryAnnivDiv.appendChild(gallery);
+                        galleryAnnivContainer.appendChild(galleryAnnivDiv);
+                    }
+                </script>
+            </div>
+               <!-- <button id="to_top" type="button"><a href="#accueil">🔝</a></button> -->
         </div>
-        <div id="photos" style="padding-top:80px;">
-            <h2>Gallerie photos:</h2>
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="parents maman.jpg">
-                  <img src="parents maman.jpg" alt="parents maman">
-                </a>
-                <div class="desc">" Ses Parents "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="maman enfant.jpg">
-                  <img src="maman enfant.jpg" alt="maman enfant">
-                </a>
-                <div class="desc">" Maman enfant "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="papa&maman.jpg">
-                  <img src="papa&maman.jpg" alt="papa&maman">
-                </a>
-                <div class="desc">" Son amour "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="mariage.jpg">
-                  <img src="mariage.jpg" alt="mariage">
-                </a>
-                <div class="desc">" Son mariage "</div>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="vacances.jpg">
-                  <img src="vacances.jpg" alt="vacances">
-                </a>
-                <div class="desc">" Vacances en famille "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="fraterie.jpg">
-                  <img src="fraterie.jpg" alt="fraterie">
-                </a>
-                <div class="desc">" Ses enfants "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="petits enfants.jpg">
-                  <img src="petits enfants.jpg" alt="petits enfants">
-                </a>
-                <div class="desc">" Ses petits enfants "</div>
-              </div>
-            </div>
-
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="baptême.jpg">
-                  <img src="baptême.jpg" alt="baptême">
-                </a>
-                <div class="desc">" Baptême Elena "</div>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="gallery">
-                <a target="_blank" href="fraterie_anniv.jpg">
-                  <img src="fraterie_anniv.jpg" alt="fraterie_anniv">
-                </a>
-                <div class="desc">" anniversaire "</div>
-              </div>
-            </div>
-        </div>
-        <div class="separateur2"></div>
-        <div id="videos" style="padding-top:80px;">
-            <h2>Gallerie videos:</h2>
-                <video class ="video" controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
-                <video class ="video" controls>
-                    <source src="bougie.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-                </video>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
