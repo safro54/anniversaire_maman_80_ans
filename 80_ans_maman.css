@@ -7,10 +7,13 @@ div.gallery {
     border: 2px solid blue;
     margin-bottom: 10px;
     border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 div.gallery:hover {
   border: 2px solid yellow;
+  /*transform: scale(1.05);*/
 }
 
 div.gallery img {
