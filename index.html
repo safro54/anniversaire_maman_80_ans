@@ -39,7 +39,7 @@
                 <script>
                     const liste_photos = {
                         "parents maman.jpg": "ses parents",
-                        "maman enfant.jpg": "maman enfant",
+                        "maman_enfant.jpg": "maman enfant",
                         "papa&maman.jpg": "son amour",
                         "mariage.jpg": "son mariage",
                         "vacances.jpg": "vacances en famille",
@@ -108,6 +108,9 @@
                         const img = document.createElement('img');
                         img.src = src;
                         img.id = src;
+                        img.loading = "lazy";
+                        img.width = "400";
+                        img.height = "300";
                         link.appendChild(img);
                         gallery.appendChild(link);
                         galleryAnnivDiv.appendChild(gallery);
